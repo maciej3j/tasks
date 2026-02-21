@@ -1,8 +1,9 @@
+# ruff: noqa
 import pytest
 from fastapi import status
 from starlette.testclient import TestClient
 
-from main import app
+from .main import app
 
 
 @pytest.fixture
