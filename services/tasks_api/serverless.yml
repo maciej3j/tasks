@@ -1,11 +1,10 @@
 service: tasks-api
 
-frameworkVersion: ">=4.22.0"
 useDotenv: true
 
 provider:
   name: aws
-  runtime: python3.13
+  runtime: python3.11
   region: ${opt:region, 'eu-west-1'}
   stage: ${opt:stage, 'development'}
   logRetentionInDays: 30

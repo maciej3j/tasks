@@ -17,7 +17,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        python-version: [3.13]
+        python-version: [3.11]
         os: [ubuntu-latest]
     runs-on: ${{ matrix.os }}
     defaults:
@@ -46,7 +46,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        python-version: [3.13]
+        python-version: [3.11]
         os: [ubuntu-latest]
     runs-on: ${{ matrix.os }}
     defaults:
@@ -60,7 +60,7 @@ jobs:
         with:
           enable-cache: true
 
-      - name: Install Python 3.13
+      - name: Install Python 3.11
         run: uv python install ${{ matrix.python-version }}
 
       - name: Install dependencies
@@ -78,7 +78,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        python-version: [3.13]
+        python-version: [3.11]
         node-version: [25]
         os: [ubuntu-latest]
     runs-on: ${{ matrix.os }}
@@ -94,7 +94,7 @@ jobs:
         with:
           enable-cache: true
 
-      - name: Install Python 3.13
+      - name: Install Python 3.11
         run: uv python install ${{ matrix.python-version }}
 
       - name: setup nodejs
@@ -103,7 +103,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: Install Serverless Framework
-        run: npm install -g serverless
+        run: npm install -g serverless@3
 
       - name: Install NPM dependencies
         run: npm install
