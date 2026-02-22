@@ -103,10 +103,12 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: Install Serverless Framework
-        run: npm install -g serverless@3
+        run: npm install -g serverless@3.40.0
 
       - name: Install NPM dependencies
-        run: npm install
+        run: |
+          npm install
+          sls plugin install -n serverless-python-requirements
 
       - name: Deploy
         run: sls deploy --stage development --verbose
