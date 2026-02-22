@@ -24,6 +24,9 @@ functions:
             origin: ${env:ALLOWED_ORIGINS}
             maxAge: 60
 
+plugins:
+  - serverless-python-requirements
+
 custom:
   pythonRequirements:
     useUv: true
