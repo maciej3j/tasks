@@ -1,3 +1,5 @@
+org: krulmaciej
+app: tasks-api
 service: tasks-api
 
 frameworkVersion: ">=4.22.0"
