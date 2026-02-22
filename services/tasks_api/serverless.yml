@@ -24,12 +24,13 @@ functions:
             origin: ${env:ALLOWED_ORIGINS}
             maxAge: 60
 
-plugins:
-  - serverless-python-requirements
-
 custom:
   pythonRequirements:
     useUv: true
+    fileName: requirements.txt
     noDeploy:
       - boto3
       - botocore
+
+plugins:
+  - serverless-python-requirements

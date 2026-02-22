@@ -110,5 +110,8 @@ jobs:
           npm install
           sls plugin install -n serverless-python-requirements
 
+      - name: Export from uv to requirements.txt
+        run: uv export --format requirements-txt --output-file requirements.txt
+
       - name: Deploy
         run: sls deploy --stage development --verbose
